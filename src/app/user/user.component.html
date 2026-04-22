@@ -1,0 +1,14 @@
+
+<h2>Create User</h2>
+<form (ngSubmit)="addUser()">
+  <input [(ngModel)]="username" name="username" placeholder="Username" required />
+  <input [(ngModel)]="age" name="age" type="number" placeholder="Age" required />
+  <button type="submit">Add</button>
+</form>
+
+<h3>User List</h3>
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.username }} - {{ user.age }}
+  </li>
+</ul>
